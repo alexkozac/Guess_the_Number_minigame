@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dice Guessing Game</title>
+  </head>
+  <body>
+    <h1 class="title">Guess the number Game!</h1>
+
+    <div class="content">
+      <img class="top-gif" src="roll.gif" alt="Top GIF" />
+
+      <div class="game">
+        <div class="container">
+          <div id="dice1" class="dice dice-one">
+            <div id="dice-one-side-one" class="side one">
+              <div class="dot one-1"></div>
+            </div>
+            <div id="dice-one-side-two" class="side two">
+              <div class="dot two-1"></div>
+              <div class="dot two-2"></div>
+            </div>
+            <div id="dice-one-side-three" class="side three">
+              <div class="dot three-1"></div>
+              <div class="dot three-2"></div>
+              <div class="dot three-3"></div>
+            </div>
+            <div id="dice-one-side-four" class="side four">
+              <div class="dot four-1"></div>
+              <div class="dot four-2"></div>
+              <div class="dot four-3"></div>
+              <div class="dot four-4"></div>
+            </div>
+            <div id="dice-one-side-five" class="side five">
+              <div class="dot five-1"></div>
+              <div class="dot five-2"></div>
+              <div class="dot five-3"></div>
+              <div class="dot five-4"></div>
+              <div class="dot five-5"></div>
+            </div>
+            <div id="dice-one-side-six" class="side six">
+              <div class="dot six-1"></div>
+              <div class="dot six-2"></div>
+              <div class="dot six-3"></div>
+              <div class="dot six-4"></div>
+              <div class="dot six-5"></div>
+              <div class="dot six-6"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="roll" class="roll-button">
+          <input
+            type="number"
+            id="betAmount"
+            placeholder="Enter bet (Max: 10)"
+            max="10"
+          />
+          <input
+            type="number"
+            id="userGuess"
+            placeholder="Enter your guess (1 to 6)"
+          />
+          <button onclick="placeBet()">Roll Dice!</button>
+          <div class="coins" id="coins">
+            <span class="coin-icon"> Coins: 50 </span>
+            <img src="coin.svg" alt="coins" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="winPopup">
+      <img
+        id="popupImageWin"
+        src="win.gif"
+        alt="Win Image"
+      />
+      <div class="result" id="result_win"></div>
+    </div>
+
+    <div class="popup" id="lossPopup">
+      <img id="popupImageLoss" src="loss.gif" alt="Loss Image" />
+      <div class="result" id="result_loss"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
